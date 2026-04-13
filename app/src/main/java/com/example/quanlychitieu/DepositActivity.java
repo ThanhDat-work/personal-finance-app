@@ -31,7 +31,6 @@ public class DepositActivity extends AppCompatActivity {
         btnConfirm = findViewById(R.id.btnConfirm);
 
         // 2. Thiết lập danh sách dịch vụ (Spinner)
-        // Chữ "Mượn tiền" phải khớp chính xác với logic kiểm tra bên dưới
         String[] services = {"Lương", "Tiền trả nợ", "Mượn tiền", "Khác"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.item_spinner, services);
         adapter.setDropDownViewResource(R.layout.item_spinner);
@@ -45,7 +44,6 @@ public class DepositActivity extends AppCompatActivity {
                 c.set(year, month, day);
 
                 // 2. Dùng SimpleDateFormat để ép kiểu dd/MM/yyyy
-                // "dd" là 2 số ngày, "MM" là 2 số tháng (M viết hoa)
                 java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd/MM/yyyy", java.util.Locale.getDefault());
 
                 // 3. Hiển thị lên EditText
@@ -98,14 +96,13 @@ public class DepositActivity extends AppCompatActivity {
         long newBalance = currentBalance + amountValue; // Gửi tiền luôn là cộng vào balance
         editor.putLong("total_balance", newBalance);
 
-        // --- 2. PHẦN MỚI: XỬ LÝ TIỀN NỢ (DEBT) ---
+        // 2. Xử lí tiền nợ
         if (service.equals("Mượn tiền")) {
             long currentDebt = pref.getLong("total_debt", 0);
             long newDebt = currentDebt + amountValue; // Mượn thêm -> Tăng nợ
             editor.putLong("total_debt", newDebt);
             Toast.makeText(this, "Đã ghi nhận nợ mới! Tổng nợ: " + newDebt + " VND", Toast.LENGTH_SHORT).show();
         }
-        // -----------------------------------------
 
         // 3. Lưu bản ghi lịch sử
         String recordId = "REC_" + System.currentTimeMillis();
