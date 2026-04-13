@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LỊCH SỬ GIAO DỊCH"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/primary_green"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"/> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="10dp"> <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="■ Gửi" android:textColor="#2196F3" android:layout_marginRight="10dp"/> <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="■ Rút" android:textColor="#F44336" android:layout_marginRight="10dp"/> <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="■ Tiết kiệm" android:textColor="#FFEB3B"/>
+</LinearLayout>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_spinner"
+        app:iconifiedByDefault="false"
+        app:queryHint="Tìm kiếm..."
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+
+        <Spinner
+            android:id="@+id/spnFilterMonth"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingLeft="10dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/spnFilterType"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingLeft="10dp"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--- Đã hiển thị tất cả giao dịch ---"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"/>
+    <LinearLayout
+        android:id="@+id/layoutDeleteActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#EEEEEE"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:backgroundTint="#9E9E9E"
+            android:layout_marginRight="5dp"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btnSelectAll"
+            android:layout_width="0dp"
+            android:layout_weight="1.4"
+            android:layout_height="wrap_content"
+            android:text="Chọn tất cả"
+            android:backgroundTint="#2196F3"
+            android:layout_marginRight="5dp"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:backgroundTint="#F44336"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

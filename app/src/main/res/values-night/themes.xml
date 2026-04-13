@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.QuanLyChiTieu" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#A3C1AD</item>
+        <item name="colorPrimaryVariant">#8DA895</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <item name="android:windowBackground">#94B09C</item>
+
+        <item name="android:statusBarColor">#8DA895</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="MenuButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MomoButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MomoIconStyle">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:tint">#008001</item>
+    </style>
+
+    <style name="MomoTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+</resources>

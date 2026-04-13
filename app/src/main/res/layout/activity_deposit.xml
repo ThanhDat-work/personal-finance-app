@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GỬI TIỀN"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="@color/primary_green"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Số tiền gửi"
+        android:inputType="number"
+        android:background="@drawable/bg_rounded_white"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="2dp"/>
+
+    <EditText
+        android:id="@+id/edtDate"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Ngày gửi"
+        android:focusable="false"
+        android:background="@drawable/bg_rounded_white"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="2dp"/>
+
+    <EditText
+        android:id="@+id/edtContent"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Nội dung"
+        android:inputType="textCapSentences|textAutoCorrect"
+        android:background="@drawable/bg_rounded_white"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại dịch vụ:"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:id="@+id/spnService"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_rounded_white"
+        android:layout_marginBottom="30dp"
+        android:elevation="2dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="XÁC NHẬN"
+        android:backgroundTint="@color/primary_green"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="15dp" />
+</LinearLayout>
