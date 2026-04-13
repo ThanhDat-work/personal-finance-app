@@ -18,8 +18,8 @@ import androidx.appcompat.widget.SearchView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.graphics.Color;
-import android.widget.Button; // Đạt nhớ thêm dòng này
-import android.widget.LinearLayout; // Và dòng này
+import android.widget.Button;
+import android.widget.LinearLayout; 
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -51,15 +51,15 @@ public class HistoryActivity extends AppCompatActivity {
         btnDelete = findViewById(R.id.btnDelete);
         layoutDeleteActions = findViewById(R.id.layoutDeleteActions);
         // --- SỬA LỖI MỜ TẠI ĐÂY ---
-// 1. Tìm ô nhập chữ (Search Text)
+        // 1. Tìm ô nhập chữ (Search Text)
         int searchEditTextId = searchView.getContext().getResources().getIdentifier("search_src_text", "id", getPackageName());
         EditText searchEditText = searchView.findViewById(searchEditTextId);
         if (searchEditText != null) {
-            searchEditText.setTextColor(Color.BLACK);      // Chữ Đạt gõ vào sẽ đen đậm
-            searchEditText.setHintTextColor(Color.BLACK);  // Chữ "Tìm kiếm..." cũng sẽ đen đậm cho rõ
+            searchEditText.setTextColor(Color.BLACK);      
+            searchEditText.setHintTextColor(Color.BLACK);  
         }
 
-// 2. Tìm icon kính lúp (Search Icon)
+        // 2. Tìm icon kính lúp (Search Icon)
         int searchIconId = searchView.getContext().getResources().getIdentifier("search_mag_icon", "id", getPackageName());
         ImageView searchIcon = searchView.findViewById(searchIconId);
         if (searchIcon != null) {
@@ -67,7 +67,7 @@ public class HistoryActivity extends AppCompatActivity {
             searchIcon.setColorFilter(Color.BLACK); // Ép kính lúp thành màu đen
         }
 
-// 3. Tìm nút X xóa chữ (Close Icon)
+        // 3. Tìm nút X xóa chữ (Close Icon)
         int closeIconId = searchView.getContext().getResources().getIdentifier("search_close_btn", "id", getPackageName());
         ImageView closeIcon = searchView.findViewById(closeIconId);
         if (closeIcon != null) {
